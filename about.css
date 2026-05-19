@@ -1,0 +1,197 @@
+    /* =========================================
+NEW MODEL PROFILE DESIGN
+========================================= */
+
+.model-profile{
+  width:100%;
+  padding:140px 6%;
+
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:90px;
+
+  align-items:center;
+
+  position:relative;
+}
+
+/* IMAGE SIDE */
+
+.profile-image-wrap{
+  position:relative;
+}
+
+.profile-image{
+  width:100%;
+  height:780px;
+
+  border-radius:40px;
+  overflow:hidden;
+
+  position:relative;
+}
+
+.profile-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* FLOATING TAG */
+
+.floating-tag{
+  position:absolute;
+  bottom:40px;
+  left:40px;
+
+  padding:18px 28px;
+
+  border-radius:100px;
+
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(20px);
+
+  font-size:15px;
+  font-weight:600;
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* CONTENT SIDE */
+
+.profile-content{
+  width:100%;
+}
+
+.profile-mini{
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#777;
+
+  margin-bottom:22px;
+}
+
+.profile-content h2{
+  font-size:110px;
+  line-height:0.88;
+
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+
+  letter-spacing:-5px;
+
+  margin-bottom:35px;
+}
+
+.profile-description{
+  font-size:18px;
+  line-height:1.9;
+  color:#666;
+
+  max-width:650px;
+
+  margin-bottom:55px;
+}
+
+/* DETAILS */
+
+.profile-details{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* ROW */
+
+.profile-row{
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:30px;
+
+  padding:22px 0;
+
+  border-bottom:1px solid rgba(0,0,0,0.08);
+
+  transition:0.4s;
+}
+
+.profile-row:hover{
+  padding-left:20px;
+}
+
+/* LABEL */
+
+.profile-row span{
+  font-size:15px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+
+  color:#888;
+}
+
+/* VALUE */
+
+.profile-row h3{
+  font-size:34px;
+
+  font-family:'Syne',sans-serif;
+  font-weight:700;
+
+  transition:0.4s;
+}
+
+.profile-row:hover h3{
+  color:#ff5e3a;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+  .model-profile{
+    grid-template-columns:1fr;
+    gap:70px;
+  }
+
+  .profile-content h2{
+    font-size:80px;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .model-profile{
+    padding:100px 5%;
+  }
+
+  .profile-image{
+    height:500px;
+  }
+
+  .profile-content h2{
+    font-size:58px;
+    letter-spacing:-2px;
+  }
+
+  .profile-description{
+    font-size:15px;
+  }
+
+  .profile-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .profile-row h3{
+    font-size:24px;
+  }
+
+}
