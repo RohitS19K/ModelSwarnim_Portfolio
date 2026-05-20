@@ -585,6 +585,22 @@
 
       card.classList.add("masonry-item","fade-item");
 
+      /* RANDOM HEIGHTS */
+
+  const randomHeights = [
+    320,
+    420,
+    520,
+    620,
+    700
+  ];
+
+  const randomHeight =
+  randomHeights[
+    Math.floor(Math.random() * randomHeights.length)
+  ];
+
+
       card.innerHTML = `
 
         <img
