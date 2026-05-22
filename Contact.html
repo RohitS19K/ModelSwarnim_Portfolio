@@ -370,49 +370,286 @@
 
     /* RESPONSIVE */
 
-    @media(max-width:1100px){
 
-      .contact-section{
-        grid-template-columns:1fr;
-      }
 
-      nav ul{
-        display:none;
-      }
 
-    }
+    /* =========================================
+PREMIUM MOBILE RESPONSIVE
+========================================= */
 
-    @media(max-width:700px){
+@media screen and (max-width:768px){
 
-      .contact-hero{
-        padding:160px 5% 80px;
-      }
+  html,
+  body{
+    overflow-x:hidden;
+    width:100%;
+  }
 
-      .contact-section{
-        padding:20px 5% 100px;
-      }
+  *{
+    max-width:100%;
+  }
 
-      .contact-hero h1{
-        letter-spacing:-2px;
-      }
+  /* NAVBAR */
 
-      .contact-hero p{
-        font-size:16px;
-      }
+  nav{
 
-      .contact-form-wrap{
-        padding:30px;
-      }
+    padding:20px 5%;
 
-      .contact-form-wrap h2{
-        font-size:38px;
-      }
+    mix-blend-mode:normal;
 
-      .contact-card{
-        padding:28px;
-      }
+  }
 
-    }
+  .logo{
+
+    font-size:24px;
+
+    color:white;
+
+    position:relative;
+    z-index:1000;
+
+  }
+
+  nav ul{
+    display:none;
+  }
+
+  .nav-btn{
+
+    width:58px;
+    height:58px;
+
+    font-size:22px;
+
+    position:relative;
+    z-index:1000;
+
+  }
+
+  /* HERO */
+
+
+
+  .contact-mini{
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+  }
+
+  .contact-hero h1{
+
+    font-size:72px;
+
+    line-height:0.9;
+
+    letter-spacing:-3px;
+
+    margin-bottom:28px;
+
+  }
+
+  .contact-hero p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    max-width:100%;
+
+  }
+
+  /* CONTACT SECTION */
+
+  .contact-section{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+    padding:20px 5% 100px;
+
+  }
+
+  /* CONTACT CARDS */
+
+  .contact-left{
+
+    gap:20px;
+
+  }
+
+  .contact-card{
+
+    padding:28px;
+
+    border-radius:30px;
+
+  }
+
+  .contact-icon{
+
+    width:60px;
+    height:60px;
+
+    border-radius:18px;
+
+    font-size:22px;
+
+    margin-bottom:22px;
+
+  }
+
+  .contact-card h3{
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+  }
+
+  .contact-card p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+  }
+
+  /* FORM */
+
+  .contact-form-wrap{
+
+    padding:30px 24px;
+
+    border-radius:35px;
+
+  }
+
+  .contact-form-wrap h2{
+
+    font-size:42px;
+
+    line-height:0.95;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+
+  }
+
+  .input-group{
+
+    margin-bottom:18px;
+
+  }
+
+  .input-group input,
+  .input-group textarea{
+
+    padding:20px 20px;
+
+    border-radius:18px;
+
+    font-size:15px;
+
+  }
+
+  .input-group textarea{
+
+    height:160px;
+
+  }
+
+  .submit-btn{
+
+    width:100%;
+
+    padding:18px 28px;
+
+    font-size:15px;
+
+  }
+
+  /* FOOTER */
+
+  footer{
+
+    padding:35px 5%;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:25px;
+
+  }
+
+  .footer-logo{
+
+    font-size:28px;
+
+  }
+
+  .socials{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+  }
+
+  .socials i{
+
+    width:48px;
+    height:48px;
+
+    font-size:18px;
+
+  }
+
+  /* SITE CREDIT */
+
+  .site-credit{
+
+    padding:10px 5% 35px;
+
+  }
+
+  .site-credit p{
+
+    font-size:13px;
+
+    line-height:1.7;
+
+  }
+
+  /* BLURS */
+
+  .blur1{
+
+    width:260px;
+    height:260px;
+
+    top:-80px;
+    left:-80px;
+
+  }
+
+  .blur2{
+
+    width:220px;
+    height:220px;
+
+    right:-60px;
+    bottom:-60px;
+
+  }
+
+}
 
     /* =========================================
 SITE CREDIT
