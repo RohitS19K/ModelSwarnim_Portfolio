@@ -27,6 +27,44 @@
       box-sizing: border-box;
     }
 
+    /* FIX MOBILE RIGHT SPACE */
+
+html,
+body{
+  overflow-x:hidden;
+  width:100%;
+}
+
+@media screen and (max-width:768px){
+
+  *{
+    max-width:100%;
+  }
+
+  .hero-right{
+    overflow:hidden;
+  }
+
+  .img3{
+
+    left:50%;
+
+    transform:
+    translateX(-50%)
+    rotate(8deg);
+
+  }
+
+  .bottom-grid{
+    width:100%;
+  }
+
+  .bottom-card{
+    min-width:0;
+  }
+
+}
+
     body {
       background: #f7f4ef;
       overflow-x: hidden;
