@@ -17,6 +17,7 @@
 
   <!-- REMIX ICON -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="gallery-mobile.css">
 
   <style>
     * {
@@ -370,55 +371,332 @@
 
     /* RESPONSIVE */
 
-    @media(max-width:1100px) {
+    /* MOBILE FADE EFFECT */
 
-      .gallery-hero h1 {
-        font-size: 90px;
-      }
+/* =========================================
+PREMIUM MOBILE UI
+========================================= */
 
-      nav ul {
-        display: none;
-      }
+@media(max-width:768px){
 
-    }
+  /* BODY */
 
-    @media(max-width:700px) {
+  body{
+    overflow-x:hidden;
+    background:#f8f6f2;
+  }
 
-      .gallery-hero {
-        padding: 160px 5% 60px;
-      }
+  /* NAVBAR */
 
-      .gallery-hero h1 {
-        font-size: 58px;
-        letter-spacing: -2px;
-      }
+  nav{
+    padding:18px 5%;
 
-      .gallery-description {
-        font-size: 15px;
-      }
+    backdrop-filter:blur(20px);
 
-      .pinterest-gallery {
-        padding: 20px 5% 100px;
-      }
+    background:rgba(248,246,242,0.7);
 
-      .masonry-wrapper {
-        columns: 2 160px;
-      }
+    border-bottom:
+    1px solid rgba(0,0,0,0.05);
+  }
 
-      .masonry-overlay h3 {
-        font-size: 18px;
-      }
+  .logo{
+    font-size:20px;
+    letter-spacing:0;
+  }
 
-      .masonry-overlay p {
-        font-size: 12px;
-      }
+  nav ul{
+    display:none;
+  }
 
-    }
+  .nav-btn{
+    width:42px;
+    height:42px;
+
+    font-size:16px;
+
+    background:#111;
+    color:white;
+  }
+
+  /* HERO */
+
+  .gallery-hero{
+
+    min-height:auto;
+
+    padding:
+    110px 5% 35px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:25px;
+  }
+
+  .gallery-hero h1{
+
+    font-size:42px;
+
+    line-height:0.95;
+
+    letter-spacing:-2px;
+
+    max-width:300px;
+  }
+
+  .gallery-description{
+
+    max-width:100%;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#666;
+  }
+
+  /* GALLERY */
+
+  .pinterest-gallery{
+    padding:
+    0 3% 80px;
+  }
+
+  .masonry-wrapper{
+    columns:2;
+    column-gap:10px;
+  }
+
+  .masonry-item{
+
+    margin-bottom:10px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:white;
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,0.04);
+  }
+
+  .masonry-item img{
+    border-radius:18px;
+  }
+
+  /* OVERLAY */
+
+  .masonry-overlay{
+
+    padding:14px;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    transparent 70%
+    );
+  }
+
+  .masonry-overlay h3{
+
+    font-size:14px;
+
+    margin-bottom:2px;
+  }
+
+  .masonry-overlay p{
+
+    font-size:10px;
+
+    letter-spacing:0.5px;
+  }
+
+  /* LIGHTBOX */
+
+  .lightbox{
+    padding:12px;
+  }
+
+  .lightbox img{
+    max-width:100%;
+    max-height:82vh;
+
+    border-radius:16px;
+  }
+
+  .close-lightbox{
+
+    top:18px;
+    right:18px;
+
+    font-size:32px;
+  }
+
+  /* FOOTER */
+
+  footer{
+
+    padding:25px 5%;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:18px;
+  }
+
+  .footer-logo{
+    font-size:20px;
+  }
+
+  .socials{
+    gap:10px;
+  }
+
+  .socials a{
+
+    width:42px;
+    height:42px;
+
+    font-size:16px;
+  }
+
+  /* CREDIT */
+
+  .site-credit{
+    padding:
+    0 5% 30px;
+  }
+
+  .site-credit p{
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    color:#888;
+  }
+
+}
+
+/* =========================================
+MOBILE BOTTOM NAV
+========================================= */
+
+.mobile-nav{
+
+  position:fixed;
+
+  left:50%;
+  bottom:18px;
+
+  transform:translateX(-50%);
+
+  width:92%;
+  max-width:420px;
+
+  height:72px;
+
+  background:
+  rgba(255,255,255,0.75);
+
+  backdrop-filter:blur(20px);
+
+  border:
+  1px solid rgba(0,0,0,0.05);
+
+  border-radius:30px;
+
+  display:none;
+
+  justify-content:space-around;
+  align-items:center;
+
+  z-index:99999;
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* ITEMS */
+
+.mobile-nav-item{
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:5px;
+
+  color:#777;
+
+  font-size:11px;
+
+  transition:0.4s;
+}
+
+/* ICON */
+
+.mobile-nav-item i{
+
+  font-size:22px;
+}
+
+/* ACTIVE */
+
+.mobile-nav-item.active{
+
+  color:#111;
+}
+
+/* HOVER */
+
+.mobile-nav-item:hover{
+
+  transform:translateY(-3px);
+}
+
+/* MOBILE ONLY */
+
+@media(max-width:768px){
+
+  .mobile-nav{
+    display:flex;
+  }
+
+  footer{
+    padding-bottom:110px;
+  }
+
+}
   </style>
 
 </head>
 
 <body>
+
+  <!-- =========================================
+MOBILE BOTTOM NAVIGATION
+========================================= -->
+
+<!-- =========================================
+CREATIVE FLOATING NAV
+========================================= -->
+
+
+
+
+</div>
 
   <!-- SHAPES -->
 
